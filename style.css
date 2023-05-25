@@ -1,3 +1,137 @@
 body{
     background: #F3F5FC;
+    scale: 0.6;
+    font-family: 'Inter';
+    margin-left: -5%;
+}
+
+.logo{
+    position: absolute;
+    width: 120px;
+    height: 48px;
+    left: 40px;
+    top: 40px;
+}
+
+#mensaje{
+    position: absolute;
+    width: 577px;
+    height: 48px;
+    left: 240px;
+    top: 168px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    font-family: 'Inter';
+
+    color: #0A3871;
+
+    background: transparent;
+    resize: none;
+    border: none;
+
+    font-size: 32px;
+}
+
+.alerta{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+
+    position: absolute;
+    width: 500px;
+    height: 18px;
+    left: 240px;
+    top: 851px;
+
+    font-size: 12px;
+    line-height: 150%;
+
+    color: #495057;
+
+    opacity: 0.8;
+
+}
+
+.botones{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+
+    position: absolute;
+    width: 680px;
+    height: 67px;
+    left: 240px;
+    top: 885px;
+
+    font-size: 16px;
+    text-align: center;
+}
+
+.encriptar{
+    
+    width: 328px;
+    height: 67px;    
+    background: #0A3871;
+    border-radius: 24px;    
+    color: #FFFFFF;
+}
+
+.desencriptar{
+    width: 328px;
+    height: 67px;
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: #0A3871;
+}
+
+.caracter{
+    position: absolute;
+    width: 336px;
+    height: 304px;
+    left: 1032px;
+    top: 283px;
+}
+
+.mensaje-resultado{
+    position: absolute;
+    width: 336px;
+    height: 200px;
+    left: 1032px;
+    top: 619px;    
+    text-align: center;
+}
+
+.resultado-uno{
+    height: 79px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    color: #343A40;
+    margin-top: 0;
+}
+
+.resultado-dos{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: #495057;
+    margin-bottom: 0;
+}
+
+.rectangulo{
+    position: absolute;
+    width: 400px;
+    height: 944px;
+    left: 1000px;
+    top: 40px;
+    background: #FFFFFF;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
 }
