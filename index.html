@@ -2,8 +2,9 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width"> 
+        <meta name="viewport" content="width=device-width, intial-scale=1"> 
         <title>Change One - Encpritador</title>
+        <link rel="icon" href="src/icon.png">
 
         <!--estilos-->
         <link rel="stylesheet" href="reset.css">
@@ -11,26 +12,33 @@
 
         <!--scripts-->
         <script src="script.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
         
-        <!--fuentes-->
-        <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+        <!--estilos-->
+        <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Emoji&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css" rel="stylesheet">
     </head>
 
     <body>
         <img src="src/Logo.png" alt="Logo Alura" class="logo">
 
         <form action="">
-            <textarea name="mensaje" id="mensaje" placeholder="Ingrese el texto aquí"></textarea>
+            <textarea autofocus id="mensaje" placeholder="Ingrese el texto aquí"></textarea>
         </form>
+`       
+        <button id="borrar">&#9587;</button>
 
         <div class="alerta">
-            <img src="src/bi_exclamation-circle-fill.png" alt="simbolo" class="simbolo" autofocus required>
+            <img src="src/bi_exclamation-circle-fill.png" alt="simbolo" class="simbolo">
             Solo letras minúsculas y sin acentos
         </div>
 
         <div class="botones">
-            <button id="encriptar">Encriptar</button>
-            <button id="desencriptar">Desencriptar</button>
+            <button id="encriptar"><span>Encriptar</span></button>
+            <button id="desencriptar"><span>Desencriptar</span></button>
         </div>
 
         <div class="rectangulo"></div>
@@ -46,7 +54,7 @@
             <textarea name="resultado" id="resultado"></textarea>
         </div>
 
-        <button id="copiar">Copiar</button>
+        <button id="copiar"><span>Copiar</span></button>
 
     </body>
 </html>
