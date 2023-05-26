@@ -11,10 +11,12 @@ var resultado = document.getElementById("resultado");
 
 borrar.style.display = "none";
 
-texto.onkeydown = mostrar;
-
 function mostrar() {
-    borrar.style.display = "block";
+        borrar.style.display = "block";
+}
+
+function ocultar() {
+        borrar.style.display = "none";
 }
 
 
@@ -26,6 +28,7 @@ borrar.onclick = borrando
 function borrando(){
   texto.value = "";
   borrar.style.display = "none";
+  texto.focus();
 }
 
 function encriptacion() {
@@ -52,7 +55,7 @@ function encriptacion() {
             resultado.value = mensaje;
         }
         else {
-            window.alert("No se puede encriptar letras mayúsculas ni acentos");
+            Swal.fire("No se puede encriptar letras mayúsculas ni acentos");
         }
     }
 }
@@ -81,7 +84,7 @@ function desencriptacion() {
             resultado.value = mensaje;
         }
         else {
-            window.alert("No se puede encriptar letras mayúsculas ni acentos");
+            Swal.fire("No se puede encriptar letras mayúsculas ni acentos");
         }
     }
 }

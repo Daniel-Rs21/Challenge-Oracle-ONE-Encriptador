@@ -23,38 +23,40 @@
     </head>
 
     <body>
-        <img src="src/Logo.png" alt="Logo Alura" class="logo">
+        
+        <nav>
+            <img src="src/Logo.png" alt="Logo Alura" class="logo">
 
-        <form action="">
-            <textarea autofocus id="mensaje" placeholder="Ingrese el texto aquí"></textarea>
-        </form>
-`       
-        <button id="borrar">&#9587;</button>
+            <form action="">
+                <textarea autofocus id="mensaje" placeholder="Ingrese el texto aquí" oninput="mostrar()" onemptied="ocultar()"></textarea>
+            </form>      
+            <button id="borrar">&#9587;</button>
 
-        <div class="alerta">
-            <img src="src/bi_exclamation-circle-fill.png" alt="simbolo" class="simbolo">
-            Solo letras minúsculas y sin acentos
-        </div>
+            <div class="alerta">
+                <img src="src/bi_exclamation-circle-fill.png" alt="simbolo" class="simbolo">
+                Solo letras minúsculas y sin acentos
+            </div>
 
-        <div class="botones">
-            <button id="encriptar"><span>Encriptar</span></button>
-            <button id="desencriptar"><span>Desencriptar</span></button>
-        </div>
+            <div class="botones">
+                <button id="encriptar"><span>Encriptar</span></button>
+                <button id="desencriptar"><span>Desencriptar</span></button>
+            </div>
 
-        <div class="rectangulo"></div>
+            <div class="rectangulo"></div>
 
-        <div class="instrucciones" id="instruccion">
-            <p class="instrucciones-uno">Ningún mensaje fue encontrado</p>
-            <p class="instrucciones-dos">Ingrese el texto que desees encriptar o desencriptar</p>
-        </div>
+            <div class="instrucciones" id="instruccion">
+                <p class="instrucciones-uno">Ningún mensaje fue encontrado</p>
+                <p class="instrucciones-dos">Ingrese el texto que desees encriptar o desencriptar</p>
+            </div>
 
-        <img src="src/Muñeco.png" alt="Muñeco viendo diamante" class="caracter" id="muneco">
+            <img src="src/Muñeco.png" alt="Muñeco viendo diamante" class="caracter" id="muneco">
 
-        <div>
-            <textarea name="resultado" id="resultado"></textarea>
-        </div>
+            <div>
+                <textarea name="resultado" id="resultado"></textarea>
+            </div>
 
-        <button id="copiar"><span>Copiar</span></button>
+            <button id="copiar"><span>Copiar</span></button>
+        </nav>
 
     </body>
 </html>
