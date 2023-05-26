@@ -8,6 +8,9 @@
         <!--estilos-->
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">
+
+        <!--scripts-->
+        <script src="script.js" defer></script>
         
         <!--fuentes-->
         <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
@@ -21,25 +24,29 @@
         </form>
 
         <div class="alerta">
-            <img src="src/bi_exclamation-circle-fill.png" alt="simbolo" class="simbolo">
+            <img src="src/bi_exclamation-circle-fill.png" alt="simbolo" class="simbolo" autofocus required>
             Solo letras minúsculas y sin espacios
         </div>
 
         <div class="botones">
-            <button class="encriptar">Encriptar</button>
-            <button class="desencriptar">Desencriptar</button>
+            <button class="encriptar" id="encriptar">Encriptar</button>
+            <button class="desencriptar" id="desencriptar">Desencriptar</button>
         </div>
 
         <div class="rectangulo"></div>
 
-        <div class="mensaje-resultado">
-            <p class="resultado-uno">Ningún mensaje fue encontrado</p>
-            <p class="resultado-dos">Ingrese el texto que desees encriptar o desencriptar</p>
+        <div class="instrucciones" id="instruccion">
+            <p class="instrucciones-uno">Ningún mensaje fue encontrado</p>
+            <p class="instrucciones-dos">Ingrese el texto que desees encriptar o desencriptar</p>
         </div>
 
-        <img src="src/Muñeco.png" alt="Muñeco viendo diamante" class="caracter">
+        <img src="src/Muñeco.png" alt="Muñeco viendo diamante" class="caracter" id="muneco">
 
-        
+        <div>
+            <textarea name="resultado" id="resultado"></textarea>
+        </div>
+
+        <button id="copiar">Copiar</button>
 
     </body>
 </html>
