@@ -1,51 +1,68 @@
-var encriptar = document.getElementById("encriptar");
-var desencriptar = document.getElementById("desencriptar");
-
-encriptar.onclick = encriptacion;
 
 document.getElementById("resultado").style.display = "none";
 document.getElementById("copiar").style.display = "none";
 
+var encriptar = document.getElementById("encriptar");
+var desencriptar = document.getElementById("desencriptar");
+var copiar = document.getElementById("copiar");
+
+encriptar.onclick = encriptacion;
+desencriptar.onclick = desencriptacion;
+copiar.onclick = copiarTexto;
+
+var resultado = document.getElementById("resultado");
+
 function encriptacion() {
-    document.getElementById("muneco").style.display = "none";
-    document.getElementById("instruccion").style.display = "none";
-    document.getElementById("resultado").style.display = "block";
-    document.getElementById("copiar").style.display = "block";
+    
+    var texto = document.getElementById("mensaje").value;
+
+    var patron = /[A-Z]|á|é|í|ó|ú/g;
+    comprobacion = texto.match(patron);
+
+    if (comprobacion == null) {
+        document.getElementById("muneco").style.display = "none";
+        document.getElementById("instruccion").style.display = "none";
+        document.getElementById("resultado").style.display = "block";
+        document.getElementById("copiar").style.display = "block";
+
+        var mapObj = {e:"enter", i:"imes", a:"ai", o:"ober", u:"ufat"};
+        var re = new RegExp(Object.keys(mapObj).join("|"),"gi");
+        texto = texto.replace(re, function(matched){return mapObj[matched];});
+
+        resultado.value = texto;
+    }
+    else {
+        window.alert("No se puede encriptar letras mayúsculas ni acentos");
+    }
+    
+}
+
+function desencriptacion() {
 
     var texto = document.getElementById("mensaje").value;
 
-    var resultado = document.getElementById("resultado");
+    var patron = /[A-Z]|á|é|í|ó|ú/g;
+    comprobacion = texto.match(patron);
 
-    var tamanoDeTexto = texto.length;
+    if (comprobacion == null) {
+        document.getElementById("muneco").style.display = "none";
+        document.getElementById("instruccion").style.display = "none";
+        document.getElementById("resultado").style.display = "block";
+        document.getElementById("copiar").style.display = "block";
 
-    for (var i = 0; i < tamanoDeTexto; i++) {
-        if (texto[i] == "e") {
-            texto = texto.substring(0, i) + "enter" + texto.substring(i + 1, tamanoDeTexto);
-            tamanoDeTexto = texto.length;
-            i += 4;
-        }
-        else if (texto[i] == "i") {
-            texto = texto.substring(0, i) + "imes" + texto.substring(i + 1, tamanoDeTexto); 
-            tamanoDeTexto = texto.length;
-            i += 3;
-        }
-        else if (texto[i] == "a") {
-            texto = texto.substring(0, i) + "ai" + texto.substring(i + 1, tamanoDeTexto);
-            tamanoDeTexto = texto.length;
-            i += 1;
-        }
-        else if (texto[i] == "o") {
-            texto = texto.substring(0, i) + "ober" + texto.substring(i + 1, tamanoDeTexto);  
-            tamanoDeTexto = texto.length;
-            i += 3;
-        }
-        else if (texto[i] == "u") {
-            texto = texto.substring(0, i) + "ufat" + texto.substring(i + 1, tamanoDeTexto);
-            tamanoDeTexto = texto.length;
-            i += 3;
-        }
+        var mapObj = {enter:"e", imes:"i", ai:"a", ober:"o", ufat:"u"};
+        var re = new RegExp(Object.keys(mapObj).join("|"),"gi");
+        texto = texto.replace(re, function(matched){return mapObj[matched];});
 
+        resultado.value = texto;
     }
+    else {
+        window.alert("No se puede encriptar letras mayúsculas ni acentos");
+    }
+    
+}
 
-    resultado.value = texto;
+function copiarTexto() {
+    portapapeles = document.getElementById("resultado").value;
+    navigator.clipboard.writeText(portapapeles)
 }
