@@ -5,31 +5,15 @@ document.getElementById("copiar").style.display = "none";
 var encriptar = document.getElementById("encriptar");
 var desencriptar = document.getElementById("desencriptar");
 var copiar = document.getElementById("copiar");
-var borrar = document.getElementById("borrar");
 var texto = document.getElementById("mensaje");
 var resultado = document.getElementById("resultado");
-
-borrar.style.display = "none";
-
-function mostrar() {
-        borrar.style.display = "block";
-}
-
-function ocultar() {
-        borrar.style.display = "none";
-}
+var rectangulo = document.getElementById("rectangulo");
 
 
 encriptar.onclick = encriptacion;
 desencriptar.onclick = desencriptacion;
 copiar.onclick = copiarTexto;
-borrar.onclick = borrando
   
-function borrando(){
-  texto.value = "";
-  borrar.style.display = "none";
-  texto.focus();
-}
 
 function encriptacion() {
     
@@ -58,6 +42,8 @@ function encriptacion() {
             Swal.fire("No se puede encriptar letras mayúsculas ni acentos");
         }
     }
+
+    rectangulo.setAttribute("style","height: 92.19%;");
 }
 
 function desencriptacion() {
@@ -87,6 +73,8 @@ function desencriptacion() {
             Swal.fire("No se puede encriptar letras mayúsculas ni acentos");
         }
     }
+
+    rectangulo.setAttribute("style","height: 92.19%;");
 }
 
 function copiarTexto() {

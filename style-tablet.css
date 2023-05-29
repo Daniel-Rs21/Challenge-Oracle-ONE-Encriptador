@@ -1,0 +1,278 @@
+/* css para tablets */
+@media screen and (max-width:1200px){
+	body{
+        background: #F3F5FC;
+        font-family: 'Inter';
+    }
+    
+    .logo{
+        position: absolute;
+        height: 6.12vb;
+        left: 66px;
+        top: 60px;
+    }
+    
+    #mensaje{
+        position: absolute;
+        width: 84vh;
+        height: 532px;
+        left: 66px;
+        top: 226px;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 150%;
+        font-family: 'Inter';
+        color: #0A3871;
+        background: transparent;
+        resize: none;
+        border-color: transparent;
+    }
+    
+    #mensaje:focus{
+        outline: none;
+    }
+    
+    #borrar{
+        position: absolute;
+        left: 820px;
+        top: calc(168px + (32px/2));
+        background-color: transparent;
+        border: none;
+        font-style: normal;
+        color: #0a3871;
+        font-size: large;
+        cursor:pointer;
+        content: '\01F512';
+    }
+    
+    #borrar:hover{
+        color: #241013;
+    }
+    
+    
+    .alerta{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0px;
+        gap: 8px;
+        position: absolute;
+        width: 500px;
+        height: 18px;
+        left: 240px;
+        top: 851px;
+        font-size: 14px;
+        line-height: 150%;
+        color: #495057;
+        opacity: 0.8;
+    }
+    
+    .botones{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 24px;
+        position: absolute;
+        width: 680px;
+        height: 67px;
+        left: 240px;
+        top: 885px;
+        text-align: center;
+    }
+    
+    #encriptar{  
+        font-size: 20px;
+        border-radius: 24px;
+        background-color: #0A3871;
+        border: none;
+        width: 328px;
+        height: 67px;
+        color: #FFFFFF;
+        color: #FFFFFF;
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+    
+    #encriptar span{
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+    
+    #encriptar span:after{
+        font-family: 'Noto Emoji', sans-serif;
+        font-size: 25px;
+        content: '\01F512'; /* simbolo que se mostrará */
+        position: absolute;
+        opacity: 0;
+        top: -5px;
+        right: -40px; /* distancia del movimiento */
+        transition: 0.5s;
+    }
+    
+    #encriptar:hover span{
+        padding-right: 35px; /* distancia del simbolo al texto */
+    }
+    
+    #encriptar:hover span:after{
+        opacity: 1;
+        right: 0;
+    }
+    
+    #encriptar:active{
+        transition: 1s;
+        scale: 97%;
+    }
+    
+    #desencriptar{
+        font-size: 20px;
+        width: 328px;
+        height: 67px;
+        background: #D8DFE8;
+        border: 1px solid #0A3871;
+        border-radius: 24px;
+        color: #0A3871;
+    }
+    
+    #desencriptar span{
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+    
+    #desencriptar span:after{
+        font-family: 'Noto Emoji', sans-serif;
+        font-size: 25px;
+        content: '\01F513';
+        position: absolute;
+        opacity: 0;
+        top: -5px;
+        right: -40px;
+        transition: 0.5s;
+    }
+    
+    #desencriptar:hover span{
+        padding-right: 35px;
+    }
+    
+    #desencriptar:hover span:after{
+        opacity: 1;
+        right: 0;
+    }
+    
+    #desencriptar:active{
+        transition: 1s;
+        scale: 97%;
+    }
+    
+    .caracter{
+        position: absolute;
+        width: 336px;
+        height: 304px;
+        left: 1032px;
+        top: 283px;
+    }
+    
+    .instrucciones{
+        position: absolute;
+        width: 336px;
+        height: 200px;
+        left: 1032px;
+        top: 619px;    
+        text-align: center;
+    }
+    
+    .instrucciones-uno{
+        height: 79px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 120%;
+        color: #343A40;
+        margin-top: 0;
+    }
+    
+    .instrucciones-dos{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        text-align: center;
+        color: #495057;
+        margin-bottom: 0;
+    }
+    
+    .rectangulo{
+        position: absolute;
+        width: 400px;
+        height: 944px;
+        left: 1000px;
+        top: 40px;
+        background: #FFFFFF;
+        box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+        border-radius: 32px;
+    }
+    
+    #resultado{
+        position: absolute;
+        width: 336px;
+        height: 781px;
+        left: 1032px;
+        top: 72px;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 150%;
+        font-family: "Inter";
+        color: #495057;
+        background: transparent;
+        resize: none;
+        border-color: transparent;
+    }
+    
+    #resultado:focus{
+        outline: none;
+    }
+    
+    #copiar{
+        position: absolute;
+        width: 336px;
+        height: 67px;
+        left: 1032px;
+        top: 885px;
+        border: 1px solid #0A3871;
+        border-radius: 24px;
+        font-size: 20px;
+    }
+    
+    #copiar span{
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+    
+    #copiar span:after{
+        font-family: 'Noto Emoji', sans-serif;
+        font-size: 25px;
+        content: '\01F4CB';
+        position: absolute;
+        opacity: 0;
+        top: -5px;
+        right: -40px;
+        transition: 0.5s;
+    }
+    
+    #copiar:hover span{
+        padding-right: 35px;
+    }
+    
+    #copiar:hover span:after{
+        opacity: 1;
+        right: 0;
+    }
+    
+    #copiar:active{
+        transition: 1s;
+        scale: 97%;
+    }
+}

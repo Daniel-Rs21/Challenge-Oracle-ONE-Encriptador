@@ -1,62 +1,84 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, intial-scale=1"> 
-        <title>Change One - Encpritador</title>
-        <link rel="icon" href="src/icon.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, intial-scale=1" />
+    <title>Change One - Encpritador</title>
+    <link rel="icon" href="src/icon.png" />
 
-        <!--estilos-->
-        <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="style.css">
+    <!--estilos-->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style-tablet.css" />
+    <link rel="stylesheet" href="style-celular.css" />
 
-        <!--scripts-->
-        <script src="script.js" defer></script>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
-        
-        <!--estilos-->
-        <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Emoji&display=swap" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css" rel="stylesheet">
-    </head>
+    <!--scripts-->
+    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
 
-    <body>
-        
-        <nav>
-            <img src="src/Logo.png" alt="Logo Alura" class="logo">
+    <!--estilos externos-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Emoji&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css"
+      rel="stylesheet"
+    />
+  </head>
 
-            <form action="">
-                <textarea autofocus id="mensaje" placeholder="Ingrese el texto aquí" oninput="mostrar()" onemptied="ocultar()"></textarea>
-            </form>      
-            <button id="borrar">&#9587;</button>
+  <body>
+    <nav>
+      <div class="entrada">
+        <img src="src/Logo.png" alt="Logo Alura" class="logo" />
 
-            <div class="alerta">
-                <img src="src/bi_exclamation-circle-fill.png" alt="simbolo" class="simbolo">
-                Solo letras minúsculas y sin acentos
-            </div>
+        <textarea
+          autofocus
+          id="mensaje"
+          placeholder="Ingrese el texto aquí"
+        ></textarea>
 
-            <div class="botones">
-                <button id="encriptar"><span>Encriptar</span></button>
-                <button id="desencriptar"><span>Desencriptar</span></button>
-            </div>
+        <div class="alerta">
+          <img
+            src="src/bi_exclamation-circle-fill.png"
+            alt="simbolo"
+            class="simbolo"
+          />
+          Solo letras minúsculas y sin acentos
+        </div>
 
-            <div class="rectangulo"></div>
+        <div class="botones">
+          <button id="encriptar"><span>Encriptar</span></button>
+          <button id="desencriptar"><span>Desencriptar</span></button>
+        </div>
+      </div>
 
-            <div class="instrucciones" id="instruccion">
-                <p class="instrucciones-uno">Ningún mensaje fue encontrado</p>
-                <p class="instrucciones-dos">Ingrese el texto que desees encriptar o desencriptar</p>
-            </div>
+      <div class="salida" id="rectangulo">
+        <img
+          src="src/Muñeco.png"
+          alt="Muñeco viendo diamante"
+          class="caracter"
+          id="muneco"
+        />
+        <div class="instrucciones" id="instruccion">
+          <p class="instrucciones-uno">Ningún mensaje fue encontrado</p>
+          <p class="instrucciones-dos">
+            Ingrese el texto que desees encriptar o desencriptar
+          </p>
+        </div>
 
-            <img src="src/Muñeco.png" alt="Muñeco viendo diamante" class="caracter" id="muneco">
+        <div>
+          <textarea name="resultado" id="resultado"></textarea>
+        </div>
 
-            <div>
-                <textarea name="resultado" id="resultado"></textarea>
-            </div>
-
-            <button id="copiar"><span>Copiar</span></button>
-        </nav>
-
-    </body>
+        <button id="copiar"><span>Copiar</span></button>
+      </div>
+    </nav>
+  </body>
 </html>
