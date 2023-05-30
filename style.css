@@ -3,8 +3,6 @@ body{
     font-family: 'Inter';
 }
 nav{
-    left: 0;
-    top: 0;
     height: 600px;
     width: 1200px;
     position: relative;
@@ -63,6 +61,7 @@ nav{
  
 .botones{
     position: absolute;
+    display: inline-block;
     left: 19.16%;
     top: 86.42%;
     width: 39.09%;
